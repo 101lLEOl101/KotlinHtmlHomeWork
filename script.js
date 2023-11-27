@@ -22,7 +22,7 @@ menu.addEventListener("click", function () {
         this.classList.add('right-speed');
         setTimeout(func = () => {
             center_menu.classList.remove('hid')
-        }, 0.5 * 1000);
+        }, 0.3 * 1000);
         setTimeout(func = () => {
             left_menu.classList.remove('hid')
         }, 0.1 * 1000);

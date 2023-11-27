@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="navigation">
         <div class="hid header_menu left" id="left_menu" onclick="window.location.href = 'index.html'">
             <i class="fa-solid fa-arrow-left main_menu_text"></i>
         </div>
@@ -20,8 +20,52 @@
         </div>
     </header>
     <main>
+        <div class="presentation">
+            <div class="content_presentation">
+                <div class="all_slides active_slide">
+                    <h1>1) Envelope («конверт»).</h1>
+                    <p>Это корневой элемент. Определяет XML-документ как сообщение SOAP с помощью
+                        пространства имен xmlns_soap=»http://www.w3.org/2003/05/soap-envelope/». Если в определении
+                        будет указан другой адрес, сервер вернет ошибку.</p>
+                </div>
+                <div class="all_slides slide">
+                    <h1>2) Header («заголовок»).</h1>
+                    <p> Включает в себя атрибуты сообщения, связанные с конкретным приложением
+                        (аутентификация, проведение платежей и так далее). В заголовке могут использоваться три
+                        атрибута, которые указывают, как принимающая сторона должна обрабатывать сообщение, —
+                        mustUnderstand, actor и encodingStyle. Значение mustUnderstand — 1 или 0 — говорит принимающему
+                        приложению о том, следует ли распознавать заголовок в обязательном или опциональном порядке.
+                        Атрибут actor задает конкретную конечную точку для сообщения. Атрибут encodingStyle
+                        устанавливает специфическую кодировку для элемента. По умолчанию SOAP-сообщение не имеет
+                        определенной кодировки.</p>
+                </div>
+                <div class="all_slides slide">
+                    <h1>3) Body («тело»).</h1>
+                    <p>Сообщение, которое передает веб-приложение. Может содержать запрос к серверу или ответ от него.
+                    </p>
+                </div>
+                <div class="all_slides slide">
+                    <h1>4) Fault («ошибка»).</h1>
+                    <p> Опциональный элемент. Передает уведомление об ошибках, если они возникли в ходе
+                        обработки сообщения. Может содержать вложенные элементы, которые проясняют причину возникновения
+                        ошибки:
+
+                        faultcode — код неполадки;
+                        faultstring — «человекопонятное» описание проблемы;
+                        faultactor — информация о программном компоненте, который вызвал ошибку;
+                        detail — дополнительные сведения о месте возникновения неполадки.
+                    </p>
+                </div>
+            </div>
+            <div class="presentation_navigation" id="presentation_navigation">
+                <i class="fa-solid fa-caret-left caret" id="left"></i>
+                <div class="number" id="number_slide"> 1/4</div>
+                <i class="fa-solid fa-caret-right caret" id="right"></i>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
+    <script src="second.js"></script>
     <script src="https://kit.fontawesome.com/a5b3356b6d.js" crossorigin="anonymous"></script>
 </body>
 

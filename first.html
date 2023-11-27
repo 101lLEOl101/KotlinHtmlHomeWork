@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="navigation">
         <div class="hid header_menu left" id="left_menu" onclick="window.location.href = 'index.html'">
             <i class="fa-solid fa-arrow-left main_menu_text"></i>
         </div>
@@ -20,8 +20,44 @@
         </div>
     </header>
     <main>
+        <div class="presentation">
+            <div class="content_presentation">
+                <div class="all_slides active_slide">
+                    <h1>1) SOAP API</h1>
+                    <p>SOAP — это протокол, по которому веб-сервисы взаимодействуют друг с другом или с клиентами.
+                        Название происходит от сокращения Simple Object Access Protocol («простой протокол доступа к
+                        объектам»). SOAP API — это веб-сервис, использующий протокол SOAP для обмена сообщениями между
+                        серверами и клиентами. При этом сообщения должны быть написаны на языке XML в соответствии со
+                        строгими стандартами, иначе сервер вернет ошибку.</p>
+                </div>
+                <div class="all_slides slide">
+                    <h1>2) Появление, развитие и актуальность SOAP API</h1>
+                    <p>Протокол SOAP был представлен в 1998 году и быстро стал одним из главных стандартов веб-служб,
+                        когда Microsoft продвигала платформу .NET, приложения которой взаимодействовали с помощью SOAP
+                        API. Сейчас протокол и API уступают по популярности архитектурному стилю REST. Но
+                        веб-приложения, использующие SOAP API, все еще пользуются спросом, особенно в банковском и
+                        телекоммуникационном секторах. </p>
+                </div>
+                <div class="all_slides slide">
+                    <h1>3) Особенности SOAP API</h1>
+                    <p>
+                        SOAP может использоваться с протоколами SMTP, FTP, HTTP, HTTPS. Чаще всего — с HTTP как с
+                        наиболее универсальным: его поддерживают все браузеры и серверы. Корректное SOAP-сообщение
+                        состоит из нескольких структурных элементов: Envelope, Header, Body и Fault.
+                    </p>
+                </div>
+            </div>
+            <div class="presentation_navigation" id="presentation_navigation">
+                <i class="fa-solid fa-caret-left caret" id="left"></i>
+                <div class="blocks active_slide_block"></div>
+                <div class="blocks slide_block"></div>
+                <div class="blocks slide_block"></div>
+                <i class="fa-solid fa-caret-right caret" id="right"></i>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
+    <script src="first.js"></script>
     <script src="https://kit.fontawesome.com/a5b3356b6d.js" crossorigin="anonymous"></script>
 </body>
 
